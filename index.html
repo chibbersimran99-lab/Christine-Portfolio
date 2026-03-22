@@ -1,12 +1,4 @@
-
-<div style="padding: 1.5rem 0;">
-  <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 1rem;">Click the button below to download Christine's portfolio as a single HTML file.</p>
-  <button onclick="downloadPortfolio()" style="padding: 10px 24px; font-size: 14px; cursor: pointer; border-radius: 8px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-primary); font-family: inherit;">Download portfolio.html</button>
-</div>
-
-<script>
-function downloadPortfolio() {
-  const html = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -182,14 +174,4 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 function show(id,btn){document.querySelectorAll('.section').forEach(function(s){s.classList.remove('visible')});document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active')});document.getElementById(id).classList.add('visible');btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
 </script>
 </body>
-</html>`;
-
-  const blob = new Blob([html], {type: 'text/html'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'christine_dlima_portfolio.html';
-  a.click();
-  URL.revokeObjectURL(url);
-}
-</script>
+</html>
